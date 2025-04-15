@@ -1,0 +1,399 @@
+@charset "utf-8";
+
+/* common */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+header {
+  background-color: rgb(36, 36, 36);
+}
+
+.common_form_space {
+  padding: 4px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 220px;
+}
+
+h1 {
+  font-size: 24px;
+}
+
+body {
+  background-color: black;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header {
+  width: 100%;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid white;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+}
+
+.common_item_box {
+  background-color: rgb(36, 36, 36);
+  padding: 8px 20px;
+  border-inline: 2px solid;
+  writing-mode: horizontal-tb;
+  /* display: flex; */
+  flex-direction: column;
+  align-items: center;
+  margin: 0 10px;
+  /* display: inline-block */
+}
+
+.common_item_box_input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid white;
+  background: black;
+  color: white;
+}
+
+.common_item_box_select {
+  padding: 10px;
+  border: 1px solid white;
+  background: black;
+  color: white;
+}
+
+.common_item_box_button {
+  display: block;
+  border-inline: 2px solid;
+  border-top: none;
+  border-bottom: none;
+  padding: 10px 24px;
+  margin: 0 auto;
+  background-color: rgb(36, 36, 36);
+  /* `.item_box` と統一 */
+  color: white;
+  cursor: pointer;
+  align-items: center;
+  /* テスト */
+  height: 100%;
+}
+
+footer {
+  padding: 10px;
+  text-align: center;
+  font-size: 12px;
+}
+
+.error {
+  color: red;
+  /* 赤色 */
+  font-weight: bold;
+  /* 太文字 */
+}
+
+/** ハンバーガーメニュー **/
+/* ======= ハンバーガーメニューのボタン ======= */
+.modal-open-button {
+  font-size: 24px;
+  text-decoration: none;
+  color: white;
+}
+
+/* ======= モーダルの基本スタイル ======= */
+.modal {
+  position: fixed;
+  top: -100%;
+  right: 0;
+  transition: top 0.3s ease-in-out;
+  text-align: center;
+}
+
+/* ======= モーダル内のリンク ======= */
+.modal-content {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: 24px;
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-content a {
+  text-decoration: none;
+  color: white;
+  font-size: 22px;
+  display: block;
+}
+
+.modal-content a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* ======= 閉じるボタン（×） ======= */
+.close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+}
+
+/* ======= モーダルを開いたときの動作 ======= */
+.modal:target {
+  margin: 0;
+  top: 0;
+}
+
+/** ログインページ **/
+
+.no-spin::-webkit-inner-spin-button,
+.no-spin::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+    -moz-appearance:textfield;
+}
+
+/** 勤怠記録ページ **/
+
+.remarks {
+  margin-top: 20px;
+  field-sizing: content;
+  min-height: min-content;
+}
+
+.remarks_btn {
+  padding: 10px 20px;
+  border: 2px solid white;
+  background-color: black;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+  white-space: nowrap;
+  margin: 0 auto;
+}
+
+/* 上下に寄せる */
+.space {
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* 縦並び */
+.vertical {
+  display: flex;
+  flex-flow: column;
+}
+
+/* 時刻サイズ */
+.dis_time {
+  font-size: 7em;
+}
+
+/* ログの親 */
+.log-box {
+  text-align: left;
+  margin: 20px 0px;
+  display: flex;
+  flex-direction: column;
+  max-width: 800px;
+}
+
+/* 始業・休憩終了 */
+.log_work {
+  background-color: rgb(36, 36, 36);
+  padding: 8px 20px;
+  flex-direction: column;
+  align-items: center;
+  border-top: 2px solid #ff7200ff;
+  border-left: 2px solid #ff7200ff
+}
+
+/* 休憩 */
+.log_break {
+  background-color: rgb(36, 36, 36);
+  padding: 8px 20px;
+  flex-direction: column;
+  align-items: center;
+  border-top: 2px solid #ffffff;
+  border-left: 2px solid #ffffff
+}
+
+/* 4つのボタンの親 */
+.status_button_box {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+  flex-wrap: wrap;
+}
+
+/* ボタン活性化 */
+.btn {
+  padding: 10px 20px;
+  border: 2px solid white;
+  background-color: black;
+  color: white;
+  border-radius: 50%;
+  font-size: 14px;
+  cursor: pointer;
+  width: 72px;
+  height: 72px;
+}
+
+/* ボタン非活性化 */
+.btn_disabled {
+  padding: 10px 20px;
+  border: 2px solid white;
+  background-color: black;
+  color: white;
+  border-radius: 50%;
+  font-size: 14px;
+  cursor: pointer;
+  width: 72px;
+  height: 72px;
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* 最下部固定 */
+.status_box {
+  position: fixed;
+  bottom: 0;
+}
+
+/** 勤怠管理画面 **/
+
+.space_for_management_screen {
+  gap: 20px;
+}
+
+/* 親要素をコンテナとして定義 */
+.employee_id {
+  display: inline;
+  white-space: nowrap;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  border: 1px solid white;
+  padding: 5px;
+  text-align: center;
+}
+
+/* 2つのボタンの親 */
+.action_button_box {
+  display: flex;
+  justify-content: space-between;
+  /* 両端に寄せる */
+  width: 100%;
+  /* 必要に応じて調整 */
+}
+
+.no-data {
+  /* color: black; */
+  background-color: #a50000;
+}
+
+/* ステータスボックスとの重なりを防ぐ */
+.index {
+  margin: 0 0 200px 0;
+}
+
+.form_CSV{
+  margin: 0 auto;
+  padding: 0;
+}
+
+/** ユーザー追加 **/
+
+.registration_results {
+  /* display: none; */
+  text-align: left;
+}
+
+.password_box {
+  display: flex;
+  flex-direction: row;
+}
+
+.toggle-password {
+  width: 28px;
+  color: white;
+  white-space: nowrap;
+  background: none;
+  border: none;
+  font-size: 18px;
+}
+
+/** 勤怠編集画面 **/
+
+.break-row{
+  display: inline-grid;
+}
+
+.time_edit{
+  color: white;
+  background-color: black;
+}
+
+input[type="datetime-local"]{
+  color-scheme: dark;
+}
+
+.form_min_width{
+  min-width: 256px;
+}
+
+.add_break{
+  margin: 12px auto 12px auto;
+}
+
+.remove-break{
+  background-color: white; /* 背景を白 */
+  color: black; /* 文字を黒 */
+  border: 1px solid black; /* 枠線を黒 */
+  font-size: 16px; /* 文字サイズ */
+  cursor: pointer; /* カーソルをポインターに */
+  border-radius: 0; /* 角を直角に */
+}
+
+/* ホバー時（マウスを乗せた時） */
+.remove-break:hover {
+  background-color: black; /* 背景を黒 */
+  color: white; /* 文字を白 */
+}
+
+.looks_like_a_button{
+  text-decoration: none;
+  font-size: 13px;
+}
+
+.remarks_edit {
+  field-sizing: content;
+  min-height: min-content;
+}
+
+.h2_edit{
+  margin: 20px 0 0 0;
+}
